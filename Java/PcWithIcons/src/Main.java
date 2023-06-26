@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -14,10 +15,24 @@ public class Main {
 
         int[] icons = new int[heightOfMonitor - 2];
 
+        /* Type of Icons Selector */
+        System.out.print("Въведете тип икони: random/input: ");
+        String typeOfIcons = inp.next();
+
         /* Icons Input */
         System.out.println("Въведете брой икони за всеки ред от монитора");
         for (int row = 0; row < heightOfMonitor - 2; row++) {
-            int iconsOnRow = inp.nextInt();
+            int iconsOnRow;
+            if (typeOfIcons.equals("input")) {
+                /* Inputted Icons */
+                iconsOnRow = inp.nextInt();
+            }
+            else {
+                /* Random Icons */
+                Random random = new Random();
+                iconsOnRow = random.nextInt(widthOfMonitor - 2);
+            }
+
             /* Valid Amount */
             if (iconsOnRow <= widthOfMonitor - 2) {
                 icons[row] = iconsOnRow;
