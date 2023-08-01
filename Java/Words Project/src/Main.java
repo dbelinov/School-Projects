@@ -13,175 +13,50 @@ public class Main {
         int letterSize = inp.nextInt();
 
         if (word.equals("hello")) {
-            //H
             for (int row = 1; row <= letterSize; row++) {
-                if (row != letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
-                        System.out.print("*");
-                        if (starsOnRow < 2)
-                        for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                            System.out.print(" ");
-                        }
-                    }
-                }
-                else {
-                    for (int starsOnRow = 2; starsOnRow <= letterSize + 2; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                H(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //E
-                if (row == 1 || row == letterSize / 2 + 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                        System.out.print("*");
-                        for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                            System.out.print(" ");
-                        }
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                E(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //2*L
                 for (int lCounter = 1; lCounter <= 2; lCounter++) {
-                    if (row != letterSize) {
-                        System.out.print("*");
-                        for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                            System.out.print(" ");
-                        }
-                    }
-                    else {
-                        for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                            System.out.print("*");
-                        }
-                    }
+                    L(letterSize, row);
 
-                    for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                        System.out.print(" ");
-                    }
+                    NextLetterInterval(letterSize);
                 }
 
                 //O
-                if (row != 1 && row != letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
-                        System.out.print("*");
-                        if (starsOnRow < 2) {
-                            for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                                System.out.print(" ");
-                            }
-                        }
-                    }
-                }
-                else {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize + 1; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
+                O(letterSize, row);
                 System.out.println();
             }
         }
         else if (word.equals("school")) {
             //S
             for (int row = 1; row <= letterSize; row++) {
-                if (row == 1 || row == letterSize / 2 + 1 || row == letterSize) {
-                    for (int starsOnRow =  1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row <= letterSize / 2) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                S(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //C
-                if (row == 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
+                C(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //H
-                    if (row != letterSize / 2 + 1) {
-                        for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
-                            System.out.print("*");
-                            if (starsOnRow < 2)
-                                for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                                    System.out.print(" ");
-                                }
-                        }
-                    }
-                    else {
-                        for (int starsOnRow = 2; starsOnRow <= letterSize + 2; starsOnRow++) {
-                            System.out.print("*");
-                        }
-                    }
-                    for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                        System.out.print(" ");
-                    }
+                H(letterSize, row);
+                NextLetterInterval(letterSize);
 
-                 //2*O
+                //2*O
                 for (int oCounter = 1; oCounter <= 2; oCounter++) {
-                    if (row != 1 && row != letterSize) {
-                        for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
-                            System.out.print("*");
-                            if (starsOnRow < 2) {
-                                for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                                    System.out.print(" ");
-                                }
-                            }
-                        }
-                    }
-                    else {
-                        for (int starsOnRow = 1; starsOnRow <= letterSize + 1; starsOnRow++) {
-                            System.out.print("*");
-                        }
-                    }
-                    for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                        System.out.print(" ");
-                    }
+                    O(letterSize, row);
+                    NextLetterInterval(letterSize);
                 }
 
                 //L
-                if (row != letterSize) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-                else {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
+                L(letterSize, row);
 
                 System.out.println();
             }
@@ -189,75 +64,22 @@ public class Main {
         else if(word.equals("fast")) {
             for (int row = 1; row <= letterSize; row++) {
                 //F
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
+                C(letterSize / 2 + 1, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //A
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                A(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //S
-                if (row == 1 || row == letterSize / 2 + 1 || row == letterSize) {
-                    for (int starsOnRow =  1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row <= letterSize / 2) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                S(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //T
-                if (row == 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize / 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                T(letterSize, row);
 
                 System.out.println();
             }
@@ -265,60 +87,17 @@ public class Main {
         else if (word.equals("car")) {
             for (int row = 1; row <= letterSize; row++) {
                 //C
-                if (row == 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
+                C(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //A
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                A(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //R
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row < letterSize / 2 + 1) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 0; intervalsOnRow < row - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                R(letterSize, row);
 
                 System.out.println();
             }
@@ -326,244 +105,56 @@ public class Main {
         else if (word.equals("teacher")) {
             for (int row = 1; row <= letterSize; row++) {
                 //J
-                if (row == 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row != letterSize - 1) {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                J(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //.
-                if (row <= letterSize / 2 + 1) {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize / 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-                else {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize / 2; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                for (int intervalsForNextWord = 1; intervalsForNextWord <= letterSize; intervalsForNextWord++) {
-                    System.out.print(" ");
-                }
+                Dot(letterSize, row);
+                NextWordInterval(letterSize);
 
 
                 //J
-                if (row == 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row != letterSize - 1) {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                J(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //E
-                if (row == 1 || row == letterSize / 2 + 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                E(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //L
-                if (row != letterSize) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-                else {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
+                L(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //Y
-                if (row == letterSize / 2 + 1 || row == letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row < letterSize / 2 + 1) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                Y(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //A
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                A(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //Z
-                for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                    if (row == 1 || row == letterSize || row + starsOnRow == letterSize + 1) {
-                        System.out.print("*");
-                    }
-                    else {
-                        System.out.print(" ");
-                    }
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                Z(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //K
-                System.out.print("*");
-                if (row <= letterSize / 2) {
-                    for (int intervalsOnRowStart = 1; intervalsOnRowStart <= letterSize - 3; intervalsOnRowStart++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                    System.out.print(" ");
-                }
-                else if (row == letterSize / 2 + 1){
-                    for (int starsOnRow = 1; starsOnRow <= letterSize - 2; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                    System.out.print(" ");
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                K(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //O
-                if (row != 1 && row != letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
-                        System.out.print("*");
-                        if (starsOnRow < 2) {
-                            for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                                System.out.print(" ");
-                            }
-                        }
-                    }
-                }
-                else {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize + 1; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                O(letterSize, row);
+                NextLetterInterval(letterSize);
 
                 //V
-                if (row != letterSize && row != letterSize - 1) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else if (row == letterSize - 1) {
-                    System.out.print(" ");
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 4; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                    System.out.print(" ");
-                }
-                else if (row == letterSize){
-                    for (int intervalsOnRowOne = 1; intervalsOnRowOne <= letterSize / 2; intervalsOnRowOne++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                    for (int intervalsOnRowTwo = 1; intervalsOnRowTwo <= letterSize / 2; intervalsOnRowTwo++) {
-                        System.out.print(" ");
-                    }
-                }
+                V(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //A
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                A(letterSize, row);
 
                 System.out.println();
             }
@@ -571,89 +162,270 @@ public class Main {
 
         else {
             for (int row = 1; row <= letterSize; row++) {
-                //F
-                if (row == 1 || row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                }
-
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
-
                 //4
-                if (row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row < letterSize / 2 + 1) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                Four(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //0
-                if (row != 1 && row != letterSize) {
-                    for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
-                        System.out.print("*");
-                        if (starsOnRow < 2) {
-                            for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                                System.out.print(" ");
-                            }
-                        }
-                    }
-                }
-                else {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize + 1; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
+                O(letterSize, row);
 
-                for (int intervalsForNextLetter = 1; intervalsForNextLetter <= letterSize / 2; intervalsForNextLetter++) {
-                    System.out.print(" ");
-                }
+                NextLetterInterval(letterSize);
 
                 //4
-                if (row == letterSize / 2 + 1) {
-                    for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
-                        System.out.print("*");
-                    }
-                }
-                else if (row < letterSize / 2 + 1) {
-                    System.out.print("*");
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 2; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
-                else {
-                    for (int intervalsOnRow = 1; intervalsOnRow <= letterSize - 1; intervalsOnRow++) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("*");
-                }
+                Four(letterSize, row);
 
                 System.out.println();
+            }
+        }
+    }
+
+    private static void Four(int letterSize, int row) {
+        if (row == letterSize / 2 + 1) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else if (row < letterSize / 2 + 1) {
+            System.out.print("*");
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+        else {
+            NextWordInterval(letterSize - 1);
+            System.out.print("*");
+        }
+    }
+
+    private static void V(int letterSize, int row) {
+        if (row != letterSize && row != letterSize - 1) {
+            System.out.print("*");
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+        else if (row == letterSize - 1) {
+            System.out.print(" ");
+            System.out.print("*");
+            NextWordInterval(letterSize - 4);
+            System.out.print("*");
+            System.out.print(" ");
+        }
+        else if (row == letterSize){
+            NextLetterInterval(letterSize);
+            System.out.print("*");
+            NextLetterInterval(letterSize);
+        }
+    }
+
+    private static void K(int letterSize, int row) {
+        System.out.print("*");
+        if (row <= letterSize / 2) {
+            NextWordInterval(letterSize - 3);
+            System.out.print("*");
+            System.out.print(" ");
+        }
+        else if (row == letterSize / 2 + 1){
+            for (int starsOnRow = 1; starsOnRow <= letterSize - 2; starsOnRow++) {
+                System.out.print("*");
+            }
+            System.out.print(" ");
+        }
+        else {
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+    }
+
+    private static void Z(int letterSize, int row) {
+        for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+            if (row == 1 || row == letterSize || row + starsOnRow == letterSize + 1) {
+                System.out.print("*");
+            }
+            else {
+                System.out.print(" ");
+            }
+        }
+    }
+
+    private static void Y(int letterSize, int row) {
+        if (row == letterSize / 2 + 1 || row == letterSize) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else if (row < letterSize / 2 + 1) {
+            System.out.print("*");
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+        else {
+            NextWordInterval(letterSize - 1);
+            System.out.print("*");
+        }
+    }
+
+    private static void Dot(int letterSize, int row) {
+        if (row <= letterSize / 2 + 1) {
+            NextLetterInterval(letterSize);
+        }
+        else {
+            for (int starsOnRow = 1; starsOnRow <= letterSize / 2; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+    }
+
+    private static void NextWordInterval(int letterSize) {
+        for (int intervalsForNextWord = 1; intervalsForNextWord <= letterSize; intervalsForNextWord++) {
+            System.out.print(" ");
+        }
+    }
+
+    private static void J(int letterSize, int row) {
+        if (row == 1 || row == letterSize) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else if (row != letterSize - 1) {
+            NextWordInterval(letterSize - 1);
+            System.out.print("*");
+        }
+        else {
+            System.out.print("*");
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+    }
+
+    private static void R(int letterSize, int row) {
+        if (row == 1 || row == letterSize / 2 + 1) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else if (row < letterSize / 2 + 1) {
+            System.out.print("*");
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+        else {
+            System.out.print("*");
+            for (int intervalsOnRow = 0; intervalsOnRow < row - 1; intervalsOnRow++) {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+        }
+    }
+
+    private static void T(int letterSize, int row) {
+        if (row == 1) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else {
+            NextLetterInterval(letterSize);
+            System.out.print("*");
+        }
+    }
+
+    private static void A(int letterSize, int row) {
+        if (row == 1 || row == letterSize / 2 + 1) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else {
+            System.out.print("*");
+            NextWordInterval(letterSize - 2);
+            System.out.print("*");
+        }
+    }
+
+    private static void C(int letterSize, int row) {
+        if (row == 1 || row == letterSize) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else {
+            System.out.print("*");
+            NextWordInterval(letterSize - 1);
+        }
+    }
+
+    private static void S(int letterSize, int row) {
+        if (row == 1 || row == letterSize / 2 + 1 || row == letterSize) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else if (row <= letterSize / 2) {
+            System.out.print("*");
+            NextWordInterval(letterSize - 1);
+        }
+        else {
+            NextWordInterval(letterSize - 1);
+            System.out.print("*");
+        }
+    }
+
+    private static void O(int letterSize, int row) {
+        if (row != 1 && row != letterSize) {
+            for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
+                System.out.print("*");
+                if (starsOnRow < 2) {
+                    NextWordInterval(letterSize - 1);
+                }
+            }
+        }
+        else {
+            for (int starsOnRow = 1; starsOnRow <= letterSize + 1; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+    }
+
+    private static void L(int letterSize, int row) {
+        if (row != letterSize) {
+            System.out.print("*");
+            NextWordInterval(letterSize - 1);
+        }
+        else {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+    }
+
+    private static void E(int letterSize, int row) {
+        if (row == 1 || row == letterSize / 2 + 1 || row == letterSize) {
+            for (int starsOnRow = 1; starsOnRow <= letterSize; starsOnRow++) {
+                System.out.print("*");
+            }
+        }
+        else {
+                System.out.print("*");
+            NextWordInterval(letterSize - 1);
+        }
+    }
+
+    private static void NextLetterInterval(int letterSize) {
+        NextWordInterval(letterSize / 2);
+    }
+
+    private static void H(int letterSize, int row) {
+        if (row != letterSize / 2 + 1) {
+            for (int starsOnRow = 1; starsOnRow <= 2; starsOnRow++) {
+                System.out.print("*");
+                if (starsOnRow < 2)
+                    NextWordInterval(letterSize - 1);
+            }
+        }
+        else {
+            for (int starsOnRow = 2; starsOnRow <= letterSize + 2; starsOnRow++) {
+                System.out.print("*");
             }
         }
     }
