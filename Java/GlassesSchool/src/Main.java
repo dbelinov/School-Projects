@@ -1,10 +1,14 @@
 import java.util.Scanner;
 
+//User chooses size of glasses -> |symbols|
+//Program prints a shape of glasses in the chosen size
+
 public class Main {
     public static void main(String[] args) {
 
         Scanner inp = new Scanner(System.in);
 
+        System.out.print("Въведете размер на очилата: ");
         int num = inp.nextInt();
 
         //sides

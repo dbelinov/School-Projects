@@ -1,6 +1,11 @@
 import java.util.Random;
 import java.util.Scanner;
 
+//User enters width and height of imaginary monitor -> |symbols|
+//User picks type of 'monitor icons' count -> random / user choice
+//If preferred icon input is 'random' -> random amount of icons per row is selected
+//If preferred icon input is 'input' -> user enters values for each row of the monitor
+//Monitor is printed
 public class Main {
 
     public static void main(String[] args) {

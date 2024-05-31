@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+//User chooses a word from the following options: hello, fast, school, car
+//User chosses the size of the printed letters size -> |symbols|
+//Program returns chosen word printed in large format
+
 public class Main {
     public static void main(String[] args) {
 
